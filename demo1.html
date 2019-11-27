@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+<script>
+	class verification
+	{
+		constructor(usn,pass,name){
+			this.NAME = name;
+			this.USN = usn;
+			this.PASS = pass;
+			
+		}
+	}
+
+array = new verification(3);
+
+array[0] = new verification("1BM18ME125","password","Rutazeet");
+array[1] = new verification("1BM18CS091","password","SAMIR KUMAR");
+array[2] = new verification("1BM18CS094","password","PUNEETH RAGHU");
+
+function fn1()
+    {
+        var user = document.getElementById("U").value;
+        var pass = document.getElementById("P").value;
+        
+        if(user === array[0].USN)
+	{
+		if(pass === array[0].PASS)
+            {
+                alert("Logging In: "+ array[0].NAME);
+                window.open("demo2.html");
+            }
+		else
+		{
+			alert("Incorrect Password");
+		}
+	}
+	else if(user === array[1].USN)
+	{
+		if(pass === array[1].PASS)
+            {
+                alert("Logging In: "+ array[1].NAME);
+                window.open("demo2.html");
+            }
+		else
+		{
+			alert("Incorrect Password");
+		}
+	}
+	else if(user === array[2].USN)
+	{
+		if(pass === array[2].PASS)
+            {
+                alert("Logging In: "+ array[2].NAME);
+                window.open("demo2.html");
+            }
+		else
+		{
+			alert("Incorrect Password");
+		}
+	}
+        else
+            {
+                alert("Incorrect Username Or Password");
+                window.open("demo1.html");
+            }
+    }
+
+
+
+
+</script>
+<title>backlogs</title>
+<link rel="stylesheet" href="s1.css">
+</head>
+<body >
+	<img src="download (3).jfif" style="margin-left:650px;">
+        <center>
+<div style="width:400px;height: 220px;background-color: yellow;">
+<h1>RE-EVALUATION</h1>
+<form action=" " method=" ">
+
+<label class = "usn">  USN    : <input type="text" id = "U"></label><br><br>
+<label class = "password"> PASSWORD :<input type="password" id="P"></label><br>
+
+<label class =" btn"><br><button type="submit"value="submit" onclick="fn1()">SIGNIN</a></button></label>
+<label><button type="submit"value="submit"><a href = "register.html">REGISTER</button></label></a>
+</center>
+</form>
+</div>
+</body>
+</html>
