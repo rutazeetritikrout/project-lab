@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<script>
+
+function fn1()
+{
+	var user = document.getElementById("N").value;
+	if(user>31 && user!= 32 && (user<65 || user>90) && (user<97 || user>122))
+	{
+		alert("wrong input");
+	}
+	else
+	{
+		alert("Logging In: " + user);
+		window.open("demo2.html");
+	}
+}
+
+</script>
+<title>backlogs</title>
+<link rel="stylesheet" href="s1.css">
+</head>
+<body >
+        <center>
+<h1>RE-EVALUATION</h1>
+<form action=" " method=" ">
+<label class = "name">  NAME    : <input type="text" id = "N"></label><br><br>
+<label class = "usn">  USN    : <input type="text" id = "U"></label><br><br>
+<label class = "password"> PASSWORD :<input type="password" id="P"></label><br><br>
+
+
+<label><button type="submit"value="submit" onclick ="fn1()">REGISTER</button></label></a>
+</center>
+</form>
+</body>
+</html>

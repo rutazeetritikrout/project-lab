@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+    <script>
+    class sub
+	{
+		constructor(name,credit){
+			this.NAME = name;
+            this.CREDIT = credit;
+		}
+	}
+
+    subarr = new sub(8);
+    subarr[0] = new sub("19MA3GCDMS",4);
+    subarr[1] = new sub("19CS3ESMMC",4);
+    subarr[2] = new sub("19CS3PCOOJ",4);
+    subarr[3] = new sub("19CS3PCDST",4);
+    subarr[4] = new sub("19CS3PCCOA",3);
+    subarr[5] = new sub("19CS3PCLOD",3);
+    subarr[6] = new sub("19HS3ICXXX",1);
+    subarr[7] = new sub("19CS3PWPW1",2);
+   
+
+
+
+   
+
+
+    function fn1()
+        {
+            
+            var i=0;
+            var credit=0;
+            var total;
+            s1 = document.getElementById("s1").value;
+            s2 = document.getElementById("s2").value;
+            s3 = document.getElementById("s3").value;
+            s4 = document.getElementById("s4").value;
+           
+
+            
+
+
+
+            for(i=0;i<8;i++)
+            {
+                if(s1===subarr[i].NAME)
+                {
+                    credit =credit +subarr[i].CREDIT;
+                    
+                }
+                else if(s2===subarr[i].NAME)
+                {
+                    credit=credit +subarr[i].CREDIT;
+                    
+                }
+                else if(s3===subarr[i].NAME)
+                {
+                    credit=credit +subarr[i].CREDIT;
+                   
+                }
+                else if(s4===subarr[i].NAME)
+                {
+                    credit=credit+subarr[i].CREDIT;
+                    
+                }
+                else
+                {
+                    credit = credit +0;
+                    
+                }
+            }
+            total=credit*1000;
+            alert("Total amount to be paid: " + total);
+            window.open("demo3.html");
+
+
+        }
+    </script>
+<title>backlogs</title>
+<link rel="stylesheet" href="s1.css">
+</head>
+<body>
+    <center>
+      <br><br><br><br><br>
+        <div style="width:500px;height: 450px;background-color: yellow;">
+<h1>RE-EVALUATION</h1>
+<h2>FILLING FORM</h2>
+<h3>subjects to be re-evaluated</h3>
+<form action=" " method=" "><br><br>
+<label></label> <class ="subject1"> SUBJECT 1:<input type="text" id = "s1"></label><br><br>
+<label></label> <class ="subject2"> SUBJECT 2:<input type="text" id = "s2"></label><br><br>
+<label></label> <class ="subject3"> SUBJECT 3:<input type="text" id = "s3"></label><br><br>
+<label></label><class ="subject4"> SUBJECT 4:<input type="text" id = "s4"></label><br><br>
+<label></label> <class =" btn"><br><button type="submit" value="submit" onclick="fn1()">SUBMIT</a></button></label>
+
+</form>
+</div>
+</center>
+</body>
+</html>
